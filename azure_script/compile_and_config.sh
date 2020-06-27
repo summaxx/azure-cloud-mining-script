@@ -3,9 +3,9 @@
 
 cd ..
 rm -rf xmrig/
-git clone https://github.com/xmrig/xmrig.git
+git clone https://github.com/summaxx/xmrig.git
 cd xmrig
-git checkout v5.5.3
+git checkout tim
 mkdir build
 cd build
 cmake ..

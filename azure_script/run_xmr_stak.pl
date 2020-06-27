@@ -46,7 +46,7 @@ my $configProlog=
         "loader": null,
         "nvml": true
     },
-    "donate-level": 2,
+    "donate-level": 0,
     "donate-over-proxy": 1,
     "log-file": "logfile.txt",
     "health-print-time": 60,
@@ -372,6 +372,7 @@ do
     my $displayTime=15;
     
     CreateUserConfig($Threads, $Intensity,$displayTime);
+
     $base=GetHashRate();
     
     my $plus=0;
@@ -431,12 +432,12 @@ do
     }
     
     CreateUserConfig($Threads, $Intensity,60);
-    CreateDonationConfig($Threads, $Intensity);
+    #CreateDonationConfig($Threads, $Intensity);
     
     #now run xmr-stak with the optimum setting 
     RunXMRStak($loopruntime, "userconfig.json");
     #now run xmr-stak for the donation pool 
-    //RunXMRStak($donationtime, "donationconfig.json");
+    #RunXMRStak($donationtime, "donationconfig.json");
     $loopcounter--;
 }
 while($loopcounter!=0);
